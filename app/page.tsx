@@ -1,5 +1,6 @@
-// pages/index.tsx
-// import { createContext } from 'react';
+"use client";
+import "swiper/css";
+import "swiper/css/pagination";
 import HeroSection from '../components/HeroSection/HeroSection';
 import ServicesSection from '../components/ServicesSection/ServicesSection';
 import AdditionalGrid from '../components/AdditionalGrid/AdditionalGrid';
@@ -9,10 +10,11 @@ import CaseStudyCarousel from '../components/CaseStudyCarousel/CaseStudyCarousel
 import TestimonialsSection from '../components/TestimonialsSection/TestimonialsSection';
 import NewsletterSection from '../components/NewsletterSection/NewsletterSection';
 import ContactForm from '../components/ContactForm/ContactForm';
-// import Footer from '../components/Footer/Footer';
+import Footer from '../components/Footer/Footer';
 
 const HomePage = () => {
   return (
+    <main>
     <div>
       <HeroSection />
       <ServicesSection />
@@ -23,9 +25,11 @@ const HomePage = () => {
       <TestimonialsSection />
       <NewsletterSection />
       <ContactForm />
-      {/* <Footer /> */}
+      <Footer />
     </div>
+    </main>
   );
 };
 
 export default HomePage;
+
