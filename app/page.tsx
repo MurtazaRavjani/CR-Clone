@@ -15,7 +15,7 @@ import Footer from '../components/Footer/Footer';
 const HomePage = () => {
   return (
     <main>
-    <div>
+    
       <HeroSection />
       <ServicesSection />
       <AdditionalGrid />
@@ -26,10 +26,9 @@ const HomePage = () => {
       <NewsletterSection />
       <ContactForm />
       <Footer />
-    </div>
+    
     </main>
   );
 };
 
 export default HomePage;
-

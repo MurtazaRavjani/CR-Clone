@@ -1,7 +1,6 @@
 import Image from "next/image";
-// import { FiPhone } from "react-icons/fi";
-// import { FaWhatsapp } from "react-icons/fa";
 import logo from "../../../ConceptRecall.MR/images/logo.jpg";
+import Button from "./Button/Button";
 
 const Navbar: React.FC = () => {
   return (
@@ -9,7 +8,7 @@ const Navbar: React.FC = () => {
       className={`bg-black text-white transition-transform duration-300"
       }`}
     >
-      <div className="container mx-auto flex justify-around items-center h-[82px] ">
+      <div className="container mx-auto justify-around items-center h-[80px] ">
         <nav className="flex justify-between items-center gap-15 pl-32 ">
           {/* Logo */}
           <div className="flex items-center pr-16">
@@ -46,35 +45,32 @@ const Navbar: React.FC = () => {
               </li>
             ))}
           </ul>
-          <div className="flex space-x-72 gap-y-96 pl-10 font-semibold px-[15px]">
-            <a
-              href="../Expert/speak-to-an-expert.tsx"
-              className="bg-orange-500 text-white py-3 px-4 rounded-md hover:bg-useclass"
-            >
-              Speak to an Expert
-            </a>
+          <div className="flex space-x-72 gap-y-96 pl-10 font-semibold px-[90px]">
+
+              <Button text="Speak to an Expert"/>
             </div>  
-            </nav>
-           
-          {/* Contact and Social Icons
+            
           
-            <div className="flex space-x-2 px-2 py-2 bg-gray-800 rounded-md ">
-              <a
-                href="https://wa.me/your-number"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white hover:bg-orange-600 transition duration-200 p-2 rounded-md"
-              >
-                <FaWhatsapp size={24} />
-              </a>
-              <a
-                href="tel:your-phone-number"
-                className="text-white hover:bg-orange-600 transition duration-200 p-2 rounded-md"
-              >
-                <FiPhone size={24} />
-              </a>
-            </div> */}
-          </div>
+            <div className="flex items-center gap-2 bg-stone-900 py-1 px-1 rounded-lg">
+          <span className="p-2 rounded-lg hover:bg-orange-600">
+            <Image
+              src="/whatsapp.svg"
+              alt="WhatsApp"
+              width={24}
+              height={24}
+            />
+          </span>
+          <span className="p-2 rounded-lg hover:bg-useclass">
+            <Image
+              src="/phone.svg"
+              alt="Phone"
+              width={24}
+              height={24}
+            />
+          </span>
+        </div>
+        </nav>
+          </div> 
        
     </header>
   );

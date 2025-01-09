@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-
+import Button from "../Button/Button";
 const services = [
   {
     title: "Tailored Mobile",
@@ -54,9 +54,7 @@ const ServicesSection = () => {
       ))}
     </div>
     <div className="flex justify-center mt-8">
-      <button className="bg-orange-500 text-white px-6 md:px-8 py-3 rounded-lg font-semibold">
-        View all services
-      </button>
+      <Button text="View all services"/>
     </div>
   </div>
   

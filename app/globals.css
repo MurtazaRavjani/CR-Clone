@@ -23,6 +23,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+@layer utilities{
 .useclass {
   background-image: linear-gradient(to right, #FB923C, #EA580C, #C2410C);
   background-size: 200% 200%;
@@ -30,7 +31,7 @@ body {
   color: transparent;
   animation: gradient 2s infinite;
 }
-
+}
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
