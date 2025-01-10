@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Button from "../Button/Button";
 
 const gridItems = [
   {
@@ -42,7 +43,7 @@ const gridItems = [
 
 const IndustriesSection = () => {
   return (
-    <div className="bg-zinc-900 py-10">
+    <div className="bg-zinc-800 py-10">
       <div className="container mx-auto px-4 md:px-20">
         {/* Section Header */}
         <div className="text-center mb-10">
@@ -56,13 +57,13 @@ const IndustriesSection = () => {
         </div>
 
         {/* Grid Items */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 px-32">
           {gridItems.map((item, index) => (
             <div
               key={index}
-              className="p-6 bg-black text-white rounded-lg shadow-md hover:shadow-lg hover:bg-zinc-800 transition"
+              className="p-6 bg-neutral-900 text-white rounded-lg shadow-md hover:shadow-lg hover:bg-neutral-600 transition"
             >
-              <div className="flex items-center justify-center mb-4">
+              <div className=" mb-4">
                 <Image
                   src={item.icon}
                   alt={item.title}
@@ -71,19 +72,17 @@ const IndustriesSection = () => {
                   className="object-contain"
                 />
               </div>
-              <h3 className="text-xl font-bold text-center">{item.title}</h3>
-              <p className="text-gray-400 mt-4 text-justify">
+              <h3 className="text-xl font-bold">{item.title}</h3>
+              <p className="text-gray-400 mt-4">
                 {item.description}
               </p>
             </div>
           ))}
         </div>
 
-        {/* Button */}
-        <div className="flex justify-center mt-10">
-          <button className="bg-orange-500 text-white px-6 py-3 font-semibold rounded-lg hover:bg-useclass transition">
-            View All Industries
-          </button>
+        <div className="mt-10 text-center">
+        <Button text="View all industries"/>
+        
         </div>
       </div>
     </div>

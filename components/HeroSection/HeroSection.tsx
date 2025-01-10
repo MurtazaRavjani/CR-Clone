@@ -14,7 +14,7 @@ const HeroSection = () => {
         Digital Advancement
       </span>
       <p className="mt-4 md:mt-9 text-gray-400 text-base md:text-lg px-4">
-        ConceptRecall takes pride in helping our clients achieve massive success, increase revenue, and take their businesses to new heights.
+      ConceptRecall takes pride in helping our clients achieve massive success, increase revenue, and take their businesses to new heights. Our strategies to catapult your business are simple yet powerful. We enjoy a distinguished reputation as a customer-oriented marketing agency, boasting 95.5% happy clients.
       </p>
     </div>
   </div>

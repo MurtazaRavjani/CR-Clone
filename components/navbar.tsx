@@ -60,7 +60,7 @@ const Navbar: React.FC = () => {
               height={24}
             />
           </span>
-          <span className="p-2 rounded-lg hover:bg-useclass">
+          <span className="p-2 rounded-lg hover:bg-orange-600">
             <Image
               src="/phone.svg"
               alt="Phone"

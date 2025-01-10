@@ -3,9 +3,8 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 
 const testimonials = [
   {
@@ -67,26 +66,32 @@ const testimonials = [
   {
     image: "/CalebHutchinson.webp",
     text: "ConceptRecall did a great job. They were highly responsive and communicative. ConceptRecall also made the landing pages exactly to the UX designer's specs.",
-    name: "Club Hutchinson",
+    name: "Caleb Hutchinson",
     pics: ["/star.svg", "/star.svg", "/star.svg", "/star.svg", "/star45.svg"],
     rating: "4.5 Rating",
   },
-  
 ];
 
 const TestimonialsSection = () => {
   return (
-    <div className="bg-zinc-950 py-10">
+    <div className="bg-neutral-950 py-16">
       <div className="container mx-auto text-center px-4">
+        {/* Header */}
         <div className="flex justify-center gap-2 mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-white">Our</h2>
-          <h3 className="text-3xl md:text-4xl font-bold useclass">Testimonials</h3>
+          <h3 className="text-3xl md:text-4xl font-bold useclass">
+            Testimonials
+          </h3>
         </div>
-        <p className="text-gray-400 mt-4">
-          Having a satisfied client that appreciates our work is a milestone in itself. Our clients are our evangelists and they love to write their journey and success stories with us.
+        <p className="text-gray-400 mt-4 px-96">
+          Having a satisfied client that appreciates our work is a milestone in
+          itself. Our clients are our evangelists, and they love to write their
+          journey and success stories with us.
         </p>
+
+        <div className="px-48"> {/* Swiper */}
         <Swiper
-          modules={[Autoplay, Navigation, Pagination]}
+          modules={[Autoplay, Navigation]}
           spaceBetween={30}
           slidesPerView={3}
           loop
@@ -102,8 +107,8 @@ const TestimonialsSection = () => {
           className="mt-8"
         >
           {testimonials.map((testimonial, index) => (
-            <SwiperSlide key={index} className="text-center">
-              <div className="bg-black text-white p-10 rounded-lg max-w-md mx-auto shadow-md border">
+            <SwiperSlide key={index} className="">
+              <div className="testimonial-card text-sm bg-black text-white p-5 rounded-lg w-[400px] h-[400px] shadow-md border-2 border-gray-700 flex flex-col justify-between  ">
                 <Image
                   src={testimonial.image}
                   alt={testimonial.name}
@@ -111,10 +116,14 @@ const TestimonialsSection = () => {
                   height={100}
                   className="rounded-full"
                 />
-                <p className="text-left mt-4 text-gray-400">{testimonial.text}</p>
-                <h4 className="text-left mt-2 font-bold">{testimonial.name}</h4>
-                <p className="text-left mt-1">{testimonial.rating}</p>
-                <div className="flex text-left mt-2">
+                <p className="text-left text-gray-400 text-sm ">
+                  {testimonial.text}
+                </p>
+                <h4 className="text-left font-bold text-xl">
+                  {testimonial.name}
+                </h4>
+                <p className="text-left text-base">{testimonial.rating}</p>
+                <div className="flex text-left">
                   {testimonial.pics.map((pic, idx) => (
                     <Image
                       key={idx}
@@ -130,6 +139,7 @@ const TestimonialsSection = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+        </div>
       </div>
     </div>
   );

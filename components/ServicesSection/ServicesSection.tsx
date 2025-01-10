@@ -30,34 +30,51 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <div className="container mx-auto px-4 py-10">
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      {services.map((service, index) => (
-        <div
-          key={index}
-          className="bg-zinc-900 p-6 shadow rounded-lg hover:shadow-2xl hover:bg-zinc-800 transition duration-300"
-        >
-          <Image
-            className="mb-4"
-            width={40}
-            height={45}
-            src={service.image}
-            alt={service.title}
-          />
-          <h2 className="text-lg md:text-xl font-semibold text-white">
-            {service.title}
-          </h2>
-          <p className="text-sm md:text-base text-gray-400 mt-2">
-            {service.description}
-          </p>
+    <div className="container mx-auto px-4 py-10 bg-neutral-900">
+      {/* Header Section */}
+      
+      <div className="justify-center flex gap-2">
+        <h1 className="text-4xl font-bold text-white">Award-winning</h1>
+        <h2 className="text-4xl font-semibold useclass">
+          Services we provide
+        </h2>
         </div>
-      ))}
+      
+        
+        <p className="text-gray-400 text-base md:text-lg mt-4 px-6 md:px-40 text-center">
+          Our services are tailor-made and we are always striving to surpass your wildest expectations!
+        </p>
+      
+
+      {/* Services Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-48 mt-10">
+        {services.map((service, index) => (
+          <div
+            key={index}
+            className="bg-zinc-800 p-6 shadow rounded-lg hover:shadow-2xl hover:bg-zinc-700 transition duration-300"
+          >
+            <Image
+              className="mb-4"
+              width={40}
+              height={45}
+              src={service.image}
+              alt={service.title}
+            />
+            <h2 className="text-lg md:text-xl font-semibold text-white">
+              {service.title}
+            </h2>
+            <p className="text-sm md:text-base text-gray-400 mt-2">
+              {service.description}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      {/* Call-to-Action Button */}
+      <div className="flex justify-center mt-8">
+        <Button text="View all services" />
+      </div>
     </div>
-    <div className="flex justify-center mt-8">
-      <Button text="View all services"/>
-    </div>
-  </div>
-  
   );
 };
 
