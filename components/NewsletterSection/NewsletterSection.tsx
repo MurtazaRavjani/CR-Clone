@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Button from "../Button/Button";
 
 const newsletters = [
   {
@@ -22,7 +23,7 @@ const newsletters = [
   },
 ];
 
-const NewsletterSection = () => {
+const NewsletterSection: React.FC = () => {
   return (
     <section className="bg-zinc-900 py-10">
       <div className="container mx-auto text-center px-48">
@@ -55,11 +56,27 @@ const NewsletterSection = () => {
               <div className="p-6">
                 <h3 className="text-lg text-left font-bold text-white">{news.title}</h3>
                 <p className="text-gray-400 text-left mt-2">{news.description}</p>
+                <div className="flex justify-between">
+                  <span className="useclass">Get more Info</span>
+                  <Image
+                    className=""
+                    src={"/arrowright.svg"}
+                    width={20}
+                    height={20}
+                    alt="Arrow Right"
+                  />
+                </div>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* View All Button (outside the loop) */}
+      <div className="flex justify-center pb-10 mt-10">
+        <Button text="View all Blogs"/>
+        </div>  
+        
     </section>
   );
 };

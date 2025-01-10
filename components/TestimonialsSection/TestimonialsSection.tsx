@@ -108,7 +108,7 @@ const TestimonialsSection = () => {
         >
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index} className="">
-              <div className="testimonial-card text-sm bg-black text-white p-5 rounded-lg w-[400px] h-[400px] shadow-md border-2 border-gray-700 flex flex-col justify-between  ">
+              <div className="testimonial-card text-sm bg-black text-white p-5 rounded-lg w-[350px] h-[400px] shadow-md border-2 border-gray-700 flex flex-col justify-between  ">
                 <Image
                   src={testimonial.image}
                   alt={testimonial.name}
