@@ -1,15 +1,16 @@
 import React from "react";
 import Button from "../Button/Button";
+import Link from "next/link";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const ContactForm: React.FC = () => {
   return (
-    <div className="bg-zinc-900 mt-20">
-      <div className="px-96 flex gap-2 justify-center align-top">
+    <div className="py-10">
+      <div className="flex gap-2 justify-center">
         <h1 className="useclass text-4xl font-bold">Contact</h1>
         <h2 className="text-4xl font-bold text-white">Us</h2>
       </div>
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 p-10 bg-neutral-900">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 p-10 px-64">
         {/* Left Side Form Section */}
         <div>
           <form className="grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -23,40 +24,100 @@ const ContactForm: React.FC = () => {
               "Country",
               "Message*",
             ].map((label, index) => (
-              <div key={index} className="grid-cols-2">
-                <label className="text-gray-300 mb-2">{label}</label>
-                <input
-                  type="text"
-                  className="bg-transparent border border-gray-300 p-2 rounded-md"
-                  placeholder={" _______________________________"}
-                />
+              <div key={index} className="flex flex-col">
+                <label className="text-gray-300 mb-2">
+                  {label.includes("*") ? (
+                    <>
+                      {label.replace("*", "")}
+                      <span className="text-red-500">*</span>
+                    </>
+                  ) : (
+                    label
+                  )}
+                </label>
+                {label === "Message*" ? (
+                  <textarea
+                    className="bg-transparent p-2 w-[700px]"
+                    placeholder={
+                      "_____________________________________________________"
+                    }
+                  />
+                ) : (
+                  <input
+                    type="text"
+                    className="bg-transparent p-1"
+                    placeholder={" _______________________________"}
+                  />
+                )}
               </div>
             ))}
-           <Button text="Send"/>
           </form>
         </div>
 
-        {/* Right Side Info Section */}
-        <div>
-          <div className="flex text-center mb-6 gap-2">
-            <h1 className="text-4xl font-bold useclass">Speak</h1>
-            <h2 className="text-4xl font-bold text-white">to an Expert</h2>
+        <div className="container text-white pt-10">
+          <span className="flex gap-2 font-bold text-3xl">
+            <h1 className="useclass">Speak</h1>
+            <h1>to an Expert</h1>
+          </span>
+          <div className="pt-5">
+            <div className="">
+              <p>
+                If you have any RFP requirements please share them with us at
+              </p>
+            </div>
+
+            {/* Email and Career Info Section */}
+            <div className="flex gap-1 ">
+              <Link className="useclass" href={"mailto:info@conceptrecall.com"}>
+                info@conceptrecall.com
+              </Link>
+              <p>and if you are looking for a career-</p>
+            </div>
+
+            {/* Career Section */}
+            <div className="flex gap-1">
+              <p>related enquiry please check our</p>
+              <Link
+                href={"/careers"}
+                className="font-semibold useclass cursor-pointer"
+              >
+                Career
+              </Link>
+              <p>section.</p>
+            </div>
           </div>
-          <div>
-            <p className="text-gray-700 mb-4 flex">
-              If you have any RFP requirements, please share them with us at
+          <div className="mt-5 text-stone-500">
+            <p>
+              Discover the perfect solution for your business needs with us!
+              Let&apos;s join forces and unlock the path to success
             </p>
-            <p className="useclass font-bold mb-4">info@conceptrecall.com</p>
-            <p className="text-gray-700 gap-2 mb-4">
-              and if you are looking for a career-related inquiry, please check our{" "}
-              <span className="useclass">Career</span> section.
-            </p>
+            <div className="flex space-x-10 mt-6">
+      <Link target="_blank" href="https://www.facebook.com/conceptrecall">
+       
+          <i className="fab fa-facebook text-5xl hover:text-orange-600 transition duration-300"></i>
+        
+      </Link>
+
+      <Link target="_blank" href="https://www.instagram.com/teamconceptrecall/">
+    
+          <i className="fab fa-instagram text-5xl hover:text-orange-600 transition duration-300"></i>
+       
+      </Link>
+
+      <Link target="_blank" href="https://www.linkedin.com/company/conceptrecall">
+    
+      <i className="fab fa-linkedin text-5xl hover:text-orange-600 transition duration-300"></i>
+
+        
+      </Link>
+    </div>
+
           </div>
-          <p className="text-gray-700 mt-8">
-            Discover the perfect solution for your business needs with us! Let&apos;s join
-            forces and unlock the path to success.
-          </p>
         </div>
+        
+      </div>
+      <div className="flex justify-center">
+        <Button text="Send"/>
       </div>
     </div>
   );

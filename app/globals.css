@@ -32,6 +32,7 @@ body {
   animation: gradient 2s infinite;
 }
 
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -49,6 +50,7 @@ body {
 .swiper-slide-next {
   opacity: 0.2;
   transform: scale(0.9);
+  
 }
 
 .swiper-slide-active {
@@ -58,3 +60,10 @@ body {
  .partnerslider {
   transition-timing-function: linear !important;
  }
+ .usecolour {
+  background-image: linear-gradient(to right, #FB923C, #EA580C, #C2410C);
+  background-size: 200% 200%;
+  background-clip: text;
+  color: transparent;
+  animation: gradient 2s infinite;
+}

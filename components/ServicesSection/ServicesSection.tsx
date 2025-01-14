@@ -30,7 +30,7 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <div className="container mx-auto px-4 py-10 bg-neutral-900">
+    <div className="container mx-auto px-4 py-10">
       {/* Header Section */}
       
       <div className="justify-center flex gap-2">

@@ -6,6 +6,7 @@ import { Navigation, Autoplay } from "swiper/modules";
 import Image from "next/image";
 import "swiper/css";
 import "swiper/css/navigation";
+import Button from "../Button/Button";
 
 interface CaseStudy {
   image: string;
@@ -77,9 +78,9 @@ const CaseStudyCarousel: React.FC = () => {
               <div className="w-full md:w-1/2 bg-zinc-900 p-6 rounded-lg text-white shadow-md">
                 <h3 className="text-2xl font-bold">{study.title}</h3>
                 <p className="text-gray-400 mt-4">{study.description}</p>
-                <button className="bg-orange-500 hover:bg-orange-600 mt-6 px-6 py-3 text-white rounded-lg">
-                  View Case Study
-                </button>
+                <div className="mt-6 px-6 py-3">
+                <Button text="View Case Study"/>
+               </div>
               </div>
             </div>
           </SwiperSlide>

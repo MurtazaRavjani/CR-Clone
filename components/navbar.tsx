@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "../../../ConceptRecall.MR/images/logo.jpg";
+import logo from "../public/logo-light.svg";
 import Button from "./Button/Button";
 
 const Navbar: React.FC = () => {
@@ -8,15 +8,15 @@ const Navbar: React.FC = () => {
       className={`bg-black text-white transition-transform duration-300"
       }`}
     >
-      <div className="container mx-auto justify-around items-center h-[80px] ">
+      <div className="container mx-auto justify-around items-center h-[70px] py-3 px-5">
         <nav className="flex justify-between items-center gap-15 pl-32 ">
           {/* Logo */}
           <div className="flex items-center pr-16">
             <Image
               src={logo}
               alt="Logo"
-              width={230}
-              height={230}
+              width={200  }
+              height={200}
               className="mr-1"
             />
          
@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
           {/* Navbar Links */}
           <ul className="flex space-x-6 pl-16 text-md font-semibold">
             {[
-              { name: "Home", href: "/home", colorClass: "text-orange-500 " },
+              { name: "Home", href: "/", colorClass: "text-orange-500 " },
               { name: "About us", href: "/about", },
               { name: "Industries", href: "/industries" },
               { name: "Services", href: "/services" },

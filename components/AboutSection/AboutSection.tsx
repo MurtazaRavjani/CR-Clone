@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 
 const AboutSection = () => {
   return (
-    <div className="container mx-auto px-6 md:px-[8rem] py-10 md:py-20 text-center bg-neutral-900">
+    <div className="container mx-auto px-6 md:px-[8rem] py-10 md:py-20 text-center">
       <div className="flex justify-center gap-2">
         <h2 className="text-2xl md:text-4xl font-bold useclass">About</h2>
         <h3 className="text-2xl md:text-4xl font-bold text-white">Us</h3>
@@ -19,7 +19,7 @@ const AboutSection = () => {
             muted
             autoPlay
             loop
-            src="/player1.mp4"
+            src="/myvideo.mp4"
           >
 
           </video>

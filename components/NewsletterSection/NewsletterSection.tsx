@@ -52,21 +52,26 @@ const NewsletterSection: React.FC = () => {
                   className="object-cover"
                 />
               </div>
-              {/* Content */}
-              <div className="p-6">
-                <h3 className="text-lg text-left font-bold text-white">{news.title}</h3>
-                <p className="text-gray-400 text-left mt-2">{news.description}</p>
-                <div className="flex justify-between">
-                  <span className="useclass">Get more Info</span>
-                  <Image
-                    className=""
-                    src={"/arrowright.svg"}
-                    width={20}
-                    height={20}
-                    alt="Arrow Right"
-                  />
-                </div>
-              </div>
+              <div className="p-6 flex flex-col justify-between h-[350px]">
+  <div>
+    <h3 className="text-lg text-left font-bold text-white">{news.title}</h3>
+    <p className="text-gray-400 text-left mt-2">{news.description}</p>
+  </div>
+  
+  <div className="flex justify-between items-center mt-4">
+    <span className="useclass">Get more Info</span>
+    <Image
+      className="flex items-center justify-center"
+      src={"/arrowright.svg"}
+      width={20}
+      height={20}
+      alt="Arrow Right"
+    />
+  </div>
+</div>
+
+
+
             </div>
           ))}
         </div>

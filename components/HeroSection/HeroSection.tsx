@@ -3,7 +3,7 @@ import React from "react";
 const HeroSection = () => {
   return (
     <div
-    className="max-h-[100vh] bg-cover bg-center px-6 md:px-[15rem] py-20 md:py-52"
+    className="min-h-[90vh] bg-cover bg-center px-6 md:px-[20rem] py-20 md:py-52"
     style={{ backgroundImage: "url('/homeBg.webp')" }}
   >
     <div className="text-center">

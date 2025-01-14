@@ -101,9 +101,6 @@ const TestimonialsSection = () => {
           }}
           centeredSlides={true}
           navigation={true}
-          pagination={{
-            clickable: true,
-          }}
           className="mt-8"
         >
           {testimonials.map((testimonial, index) => (
