@@ -10,7 +10,7 @@ const ContactForm: React.FC = () => {
         <h1 className="useclass text-4xl font-bold">Contact</h1>
         <h2 className="text-4xl font-bold text-white">Us</h2>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 p-10 px-64">
+      <div className="grid grid-cols-1 lg:grid-cols-2 p-10 gap-40 px-48">
         {/* Left Side Form Section */}
         <div>
           <form className="grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -37,16 +37,16 @@ const ContactForm: React.FC = () => {
                 </label>
                 {label === "Message*" ? (
                   <textarea
-                    className="bg-transparent p-2 w-[700px]"
+                    className="bg-transparent p-2 w-[485px]"
                     placeholder={
-                      "_____________________________________________________"
+                      "____________________________________________________"
                     }
                   />
                 ) : (
                   <input
                     type="text"
                     className="bg-transparent p-1"
-                    placeholder={" _______________________________"}
+                    placeholder={" _______________________________________________"}
                   />
                 )}
               </div>

@@ -42,32 +42,46 @@ const Footer: React.FC = () => {
             ))}
           </ul>
         </div>
-
-        {/* Contact Us */}
-        <div>
+{/* Contact Us */}
+<div>
   <h3 className="text-xl text-white font-bold mb-4">Contact Us</h3>
   <ul className="space-y-4">
     {/* Phone */}
-    <li className="flex items-center gap-2 hover:text-orange-600 transition duration-300">
-      <i className="fas fa-phone-alt text-white"></i>
-      <p>(+92) 316 7856 990</p>
+    <li className="flex flex-col gap-2">
+      <div className="flex items-center gap-2">
+        <i className="fas fa-phone-alt text-white"></i>
+        <p className="font-bold">Phone:</p>
+      </div>
+      <p className="hover:text-orange-600 transition duration-300">
+        (+92) 316 7856 990
+      </p>
     </li>
 
     {/* Email */}
-    <li className="flex items-center gap-2 hover:text-orange-600 transition duration-300">
-      <i className="fas fa-envelope text-white"></i>
-      <p>info@conceptrecall.com</p>
+    <li className="flex flex-col gap-2">
+      <div className="flex items-center gap-2">
+        <i className="fas fa-envelope text-white"></i>
+        <p className="font-bold">Email:</p>
+      </div>
+      <p className="hover:text-orange-600 transition duration-300">
+        info@conceptrecall.com
+      </p>
     </li>
 
     {/* Address */}
-    <li className="flex items-start gap-2 hover:text-orange-600 transition duration-300">
-      <i className="fas fa-map-marker-alt text-white mt-1"></i>
-      <p>
+    <li className="flex flex-col gap-2">
+      <div className="flex items-center gap-2">
+        <i className="fas fa-map-marker-alt text-white mt-1"></i>
+        <p className="font-bold">Address:</p>
+      </div>
+      <p className="hover:text-orange-600 transition duration-300">
         B-219, Block 10 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh 75300
       </p>
     </li>
   </ul>
 </div>
+
+
 
 
         {/* News Letter */}

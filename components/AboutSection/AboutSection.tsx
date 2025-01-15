@@ -26,7 +26,7 @@ const AboutSection = () => {
         </div>
         <div className="w-full md:w-1/2 text-left items-center mt-20">
           <p className="text-sm md:text-sm text-gray-400">
-          We believe in surpassing expectations and satisfying our clientele to form lasting alliances. What makes this target attainable is thinking out of the box and gladly, our personnel does just that! We fuse creativity with technical expertise to foster impactful results and never fail to surprise our clients with it!
+          We believe in surpassing expectations and satisfying our clients to form lasting alliances. What makes this target attainable is thinking out of the box and gladly, our personnel does just that! We fuse creativity with technical expertise to foster impactful results and never fail to surprise our clients with it!
           </p>
         <div className="mt-4">
         <Button text="Contact us"/>
