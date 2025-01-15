@@ -88,10 +88,10 @@ const CaseStudyCarousel: React.FC = () => {
       </Swiper>
 
       {/* Custom Navigation Buttons */}
-      <button className="custom-prev absolute right-64 top-24 bg-orange-500 p-4 z-20 shadow-md rounded hover:bg-gray-400 transition">
+      <button className="custom-prev absolute right-64 top-24 font-extrabold bg-orange-500 p-4 z-20 shadow-md rounded hover:bg-gray-400 transition">
         <span>&lt;</span>
       </button>
-      <button className="custom-next absolute right-52 top-24 bg-orange-500 p-4 z-20 shadow-md rounded hover:bg-gray-400 transition">
+      <button className="custom-next absolute right-52 top-24 font-extrabold bg-orange-500 p-4 z-20 shadow-md rounded hover:bg-gray-400 transition">
         <span>&gt;</span>
       </button>
     </section>

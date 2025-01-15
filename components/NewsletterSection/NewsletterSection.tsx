@@ -52,7 +52,7 @@ const NewsletterSection: React.FC = () => {
                   className="object-cover"
                 />
               </div>
-              <div className="p-6 flex flex-col justify-between h-[350px] hover:bg-neutral-800">
+              <div className="p-6 flex flex-col justify-between h-[350px] hover:bg-neutral-800 transition duration-300">
   <div>
     <h3 className="text-lg text-left font-bold text-white">{news.title}</h3>
     <p className="text-gray-400 text-left mt-2">{news.description}</p>

@@ -1,24 +1,30 @@
 import React from "react";
 
-const HeroSection = () => {
+interface Home {
+  title: string;
+  title1: string;
+  paragraph: string;
+}
+
+const HeroSection = ({ title, title1, paragraph }: Home) => {
   return (
     <div
-    className="min-h-[90vh] bg-cover bg-center px-6 md:px-[20rem] py-20 md:py-52"
-    style={{ backgroundImage: "url('/homeBg.webp')" }}
-  >
-    <div className="text-center">
-      <h1 className="text-white text-3xl md:text-6xl font-bold">
-        Revolutionizing Marketing for
-      </h1>
-      <span className="text-white text-3xl md:text-6xl font-bold useclass">
-        Digital Advancement
-      </span>
-      <p className="mt-4 md:mt-9 text-gray-400 text-base md:text-lg px-4">
-      ConceptRecall takes pride in helping our clients achieve massive success, increase revenue, and take their businesses to new heights. Our strategies to catapult your business are simple yet powerful. We enjoy a distinguished reputation as a customer-oriented marketing agency, boasting 95.5% happy clients.
-      </p>
+      className="min-h-[90vh] bg-cover bg-center px-6 md:px-[20rem] py-20 md:py-52"
+      style={{ backgroundImage: "url('/homeBg.webp')" }}
+    >
+      <div className="text-center p">
+
+        <h1 className="text-white text-3xl md:text-6xl font-bold">
+          {title}
+        </h1>
+        <span className="text-white text-3xl md:text-6xl font-bold useclass">
+          {title1}
+        </span>
+        <p className="mt-4 md:mt-9 text-gray-400 text-base md:text-lg px-4">
+     {paragraph}
+        </p>
+      </div>
     </div>
-  </div>
-  
   );
 };
 

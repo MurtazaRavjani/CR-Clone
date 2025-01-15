@@ -109,9 +109,9 @@ const TestimonialsSection = () => {
                 <Image
                   src={testimonial.image}
                   alt={testimonial.name}
-                  width={100}
+                  width={250}
                   height={100}
-                  className="rounded-full"
+                  className="rounded-full object-cover w-20 h-20"
                 />
                 <p className="text-left text-gray-400 text-sm ">
                   {testimonial.text}
