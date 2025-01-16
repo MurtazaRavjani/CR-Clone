@@ -22,7 +22,7 @@ const Button: React.FC<ButtonProps> = ({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={`bg-gradient-to-r from-orange-400 via-orange-500 to-orange-700 group-hover:from-orange-700 group-hover:via-orange-500 group-hover:to-orange-400 transition-all duration-400 text-center text-white px-6 py-3 rounded-xl text-[16px] font-semibold ${className}`}
+      className={`bg-gradient-to-r from-orange-400 via-orange-500 to-orange-700 group-hover:from-orange-700 group-hover:via-orange-500 group-hover:to-orange-400 transition-all duration-900 text-center text-white px-6 py-3 rounded-xl text-[16px] font-semibold ${className}`}
     >
       {text}
     </button>

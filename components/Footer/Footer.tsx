@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
     <p className="font-bold text-sm">Phone</p>
   </div>
   <a
-    href="https://wa.me/923167856990"
+    href="tel:+923167856990"
     target="_blank"
     rel="noopener noreferrer"
     className="hover:text-orange-600 transition duration-300 text-sm text-gray-400 px-2"
