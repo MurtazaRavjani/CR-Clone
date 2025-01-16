@@ -75,7 +75,8 @@ const testimonials = [
 const TestimonialsSection = () => {
   return (
     <div className="bg-neutral-950 py-16">
-      <div className="container mx-auto text-center px-4">
+      <div className="container">
+        <div className=" mx-auto text-center px-4">
         {/* Header */}
         <div className="flex justify-center gap-2 mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-white">Our</h2>
@@ -83,6 +84,7 @@ const TestimonialsSection = () => {
             Testimonials
           </h3>
         </div>
+        
         <p className="text-gray-400 mt-4 px-96">
           Having a satisfied client that appreciates our work is a milestone in
           itself. Our clients are our evangelists, and they love to write their
@@ -138,7 +140,9 @@ const TestimonialsSection = () => {
         </Swiper>
         </div>
       </div>
+      </div>
     </div>
+    
   );
 };
 

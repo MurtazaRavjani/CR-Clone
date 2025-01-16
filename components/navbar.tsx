@@ -39,34 +39,24 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <header className={`bg-black text-white transition-transform duration-300`}>
-      <div className="container mx-auto h-[70px] py-3 px-5 flex justify-between items-center">
-        {/* Logo */}
-        <div className="flex items-center">
+    <header className="bg-black">
+      <nav className="container mx-auto flex justify-between items-center py-4">
+        {/* Logo Section */}
+        <div className="flex-shrink-0 flex items-center">
           <Image
             src={logo}
             alt="Logo"
-            width={200}
-            height={200}
+            width={180}
+            height={250}
             className="cursor-pointer"
             onClick={() => (window.location.href = "/")} // Navigate to Home
           />
         </div>
 
-        {/* Hamburger Menu */}
-        <button
-          className="lg:hidden block p-2 rounded focus:outline-none"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          <span className="block w-6 h-1 bg-white mb-1"></span>
-          <span className="block w-6 h-1 bg-white mb-1"></span>
-          <span className="block w-6 h-1 bg-white"></span>
-        </button>
-
-        {/* Navbar Links */}
-        <ul className="hidden lg:flex space-x-6 text-md font-semibold min-w-max">
+        {/* Desktop Navigation Links */}
+        <ul className="hidden lg:flex items-center gap-6 pl-20 text-white text-sm font-semibold flex-nowrap w-full">
           {links.map((link, index) => (
-            <li key={index}>
+            <li key={index} className="flex items-center gap-6 min-w-max">
               <a
                 href={link.href}
                 className={`${
@@ -77,46 +67,58 @@ const Navbar: React.FC = () => {
               >
                 {link.name}
               </a>
+              {/* Insert the button after the Careers link */}
+              {link.name === "Careers" && (
+                <div className="ml-7">
+                  <Button text="Speak to an Expert" padding="py-3 px-5 text-sm" gap="" />
+                </div>
+              )}
             </li>
           ))}
         </ul>
 
-        {/* Right Section - Desktop Only */}
-        <div className="hidden lg:flex items-center gap-4 min-w-max">
-          <Button text="Speak to an Expert" />
-          <div className="flex items-center gap-2 bg-stone-900 py-1 px-1 rounded-lg">
-            <a
-              href="https://wa.me/923167856990" // Replace with your WhatsApp link
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 rounded-lg hover:bg-orange-600"
-            >
-              <Image
-                src="/whatsapp.svg"
-                alt="WhatsApp"
-                width={24}
-                height={24}
-              />
-            </a>
-
-            <a
-              href="tel:+923167856990" // Replace with your phone number
-              className="p-2 rounded-lg hover:bg-orange-600"
-            >
-              <Image
-                src="/phone.svg"
-                alt="Phone"
-                width={24}
-                height={24}
-              />
-            </a>
-          </div>
+        {/* Right Section for Desktop */}
+        <div className="hidden lg:flex items-center">
+          <a
+            href="https://wa.me/923167856990"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-2 rounded-lg bg-stone-900 hover:bg-useclass"
+          >
+            <Image
+              src="/whatsapp.svg"
+              alt="WhatsApp"
+              width={24}
+              height={24}
+            />
+          </a>
+          <a
+            href="tel:+923167856990"
+            className="p-2 rounded-lg bg-stone-900 hover:bg-useclass"
+          >
+            <Image
+              src="/phone.svg"
+              alt="Phone"
+              width={24}
+              height={24}
+            />
+          </a>
         </div>
-      </div>
+
+        {/* Hamburger Menu for Mobile */}
+        <button
+          className="lg:hidden block p-2 rounded focus:outline-none"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <span className="block w-6 h-1 bg-white mb-1"></span>
+          <span className="block w-6 h-1 bg-white mb-1"></span>
+          <span className="block w-6 h-1 bg-white"></span>
+        </button>
+      </nav>
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-0 left-0 w-64 h-full bg-black text-white transform ${
+        className={`fixed top-0 left-0 w-80 h-full bg-black text-white transform ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 z-50`}
       >
@@ -148,7 +150,7 @@ const Navbar: React.FC = () => {
                   href={link.href}
                   className={`block ${
                     currentPath === link.href
-                      ? "useclass"
+                      ? "useclass underline useclass"
                       : "hover:useclass transition duration-200"
                   }`}
                   onClick={() => setIsMenuOpen(false)}
@@ -160,24 +162,24 @@ const Navbar: React.FC = () => {
           </ul>
 
           {/* Speak to an Expert Button */}
-          <div className="mt-8">
-            <Button text="Speak to an Expert" />
+          <div className="py-2">
+            <Button text="Speak to an Expert" padding="mt-10 py-2 px-2" gap="gap-4" />
           </div>
-        </div>
 
-        {/* Social Media Links (Always visible on the same screen) */}
-        <div className="absolute bottom-16 left-4 flex space-x-4">
-          {socialLinks.map((social, index) => (
-            <a
-              key={index}
-              href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-lg p-2 rounded-full hover:text-orange-500 transition duration-200"
-            >
-              <i className={social.icon}></i>
-            </a>
-          ))}
+          {/* Social Media Icons */}
+          <div className="absolute bottom left-3 flex space-x-4">
+            {socialLinks.map((social, index) => (
+              <a
+                key={index}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-lg p-2 rounded-full hover:bg-useclass transition duration-200"
+              >
+                <i className={social.icon}></i>
+              </a>
+            ))}
+          </div>
         </div>
       </div>
 

@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        lato: ["Lato", "sans-serif"], // Add Lato font
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -16,7 +19,7 @@ export default {
         useclass: "linear-gradient(to right, #FB923C, #EA580C, #C2410C)",
       },
       backgroundSize: {
-        '200': "200% 200%",
+        "200": "200% 200%",
       },
       animation: {
         gradient: "gradient 2s infinite",
