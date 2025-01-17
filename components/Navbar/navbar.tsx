@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import logo from "../public/logo-light.svg";
-import Button from "./Button/Button";
+import logo from "/public/logo-light.svg";
+import Button from "../Button/Button";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

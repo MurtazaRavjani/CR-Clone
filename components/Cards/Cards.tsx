@@ -4,6 +4,7 @@ import Image from 'next/image';
 
 
 interface CardProps{
+    key : number;
     imageSrc : string;
     imageAlt : string;
     title: string;
@@ -18,7 +19,7 @@ const Card: React.FC<CardProps> = ({
     description,
   
 }) =>  {
-    const router = useRouter
+    
     const handleClick = () =>{
         // router.push(link)
     } 

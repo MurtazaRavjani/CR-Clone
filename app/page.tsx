@@ -1,10 +1,10 @@
 import React from "react";
-import Index from "../pages/home/Index";
+import Index1 from "@/pages/Home/home";
 
 export default function Home (){
     return (
 <div>
-    <Index />
+    <Index1 />
 </div>
     )
 }

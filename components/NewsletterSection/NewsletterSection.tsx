@@ -2,6 +2,12 @@ import React from "react";
 import Image from "next/image";
 import Button from "../Button/Button";
 
+interface NewsletterSectionProps {
+  tittle: string;
+  tittle1: string;
+  text: string;
+}
+
 const newsletters = [
   {
     image: "/1.png",
@@ -23,65 +29,48 @@ const newsletters = [
   },
 ];
 
-const NewsletterSection: React.FC = () => {
+const NewsletterSection: React.FC<NewsletterSectionProps> = ({
+  tittle,
+  tittle1,
+  text,
+}) => {
   return (
     <section className="bg-zinc-900 py-10">
       <div className="container mx-auto text-center px-48">
         {/* Section Header */}
         <div className="flex justify-center gap-2">
-          <h2 className="text-3xl md:text-4xl font-bold text-white">Recent</h2>
-          <h3 className="text-3xl md:text-4xl font-bold useclass">News Letter</h3>
+          <h2 className="text-3xl md:text-4xl font-bold text-white">{tittle}</h2>
+          <h3 className="text-3xl md:text-4xl font-bold useclass">{tittle1}</h3>
         </div>
-        <p className="text-gray-400 mt-4 text-center px-60">
-          Uncover industry trends, insights, and innovative ideas. Our blog posts are crafted to keep you informed, inspired, and ahead in your professional journey. Dive in now!
-        </p>
+        <p className="text-gray-400 mt-4 text-center px-60">{text}</p>
 
         {/* Newsletter Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 w-[1150px]">
           {newsletters.map((news, index) => (
-            <div
-              key={index}
-              className="bg-black rounded-lg overflow-hidden shadow-lg"
-            >
+            <div key={index} className="bg-black rounded-lg overflow-hidden shadow-lg">
               {/* Image Wrapper */}
               <div className="w-full h-[200px] relative">
-                <Image
-                  src={news.image}
-                  alt={news.title}
-                  fill // Makes the image fill the parent container
-                  className="object-cover"
-                />
+                <Image src={news.image} alt={news.title} fill className="object-cover" />
               </div>
               <div className="p-6 flex flex-col justify-between h-[350px] hover:bg-neutral-800 transition duration-300">
-  <div>
-    <h3 className="text-lg text-left font-bold text-white">{news.title}</h3>
-    <p className="text-gray-400 text-left mt-2">{news.description}</p>
-  </div>
-  
-  <div className="flex justify-between items-center mt-4">
-    <span className="useclass">Get more Info</span>
-    <Image
-      className="flex items-center justify-center"
-      src={"/arrowright.svg"}
-      width={20}
-      height={20}
-      alt="Arrow Right"
-    />
-  </div>
-</div>
-
-
-
+                <div>
+                  <h3 className="text-lg text-left font-bold text-white">{news.title}</h3>
+                  <p className="text-gray-400 text-left mt-2">{news.description}</p>
+                </div>
+                <div className="flex justify-between items-center mt-4">
+                  <span className="useclass">Get more Info</span>
+                  <Image className="flex items-center justify-center" src="/arrowright.svg" width={20} height={20} alt="Arrow Right" />
+                </div>
+              </div>
             </div>
           ))}
         </div>
       </div>
 
-      {/* View All Button (outside the loop) */}
+      {/* View All Button */}
       <div className="flex justify-center pb-10 mt-10">
-        <Button text="View all Blogs"/>
-        </div>  
-        
+        <Button text="View all Blogs" />
+      </div>
     </section>
   );
 };
